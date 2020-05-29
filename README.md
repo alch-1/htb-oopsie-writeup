@@ -87,7 +87,7 @@ Then we `curl 10.10.10.28/uploads/php-reverse-shell.php`
 
 We are in!
 
-Now we need to escalate privileges. First let's get a list of users using `cat /etc/passwd`. We find robert to be an interesting user, so let's go to `/home/robert`. We find a file named `user.txt`, containing the text `f2c74ee8db7983851ab2a96a44eb7981`. Let's save it for now.
+Now we need to escalate privileges. First let's get a list of users using `cat /etc/passwd`. We find robert to be an interesting user, so let's go to `/home/robert`. We find a file named `user.txt`, containing the user flag. Let's save it for now.
 
 `su robert` doesn't work because php shell doesn't count as a terminal, so we get the error `su: must be run from a terminal`.
 
@@ -186,7 +186,7 @@ And we run `bugtracker` again.
 We see a familiar `#`, but just to be sure, we run `whoami` and we get `root`.
 
 ---
-We also find an interesting file in `/root` called `root.txt`, containing `af13b0bee69f8a877c3faf667f7beacf`.
+We also find an interesting file in `/root` called `root.txt`, containing the root flag.
 
 We also find a few reports under the `reports` folder.
 
